@@ -1,0 +1,2 @@
+# SkyJot
+SkyJot Bukkit plugin
