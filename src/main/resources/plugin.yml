@@ -1,0 +1,11 @@
+name: RW
+main: com.allocinit.skyjot.SkyJot
+version: 1.0.0-SNAPSHOT
+
+commands:
+  skyjot:
+  
+permissions:
+  skyjot:
+    default: op
+  
