@@ -5,32 +5,24 @@ import java.util.Map;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
-import org.bukkit.material.MaterialData;
+import org.bukkit.block.data.BlockData;
 
+public class Undo {
+	private Map<Location, BlockData> undoMap = new HashMap<>();
 
-public class Undo
-{
-	private Map<Location, MaterialData> undoMap = new HashMap<>();
-
-	public Undo()
-	{
+	public Undo() {
 	}
 
-	public void saveLocation(Location where)
-	{
-		MaterialData what = where.getBlock().getState().getData();
+	public void saveLocation(Location where) {
+		BlockData what = where.getBlock().getBlockData();
 		undoMap.put(where, what);
 	}
 
-	public void undo()
-	{
-		for (Map.Entry<Location, MaterialData> entry : undoMap.entrySet())
-		{
-			MaterialData data = entry.getValue();
-
+	public void undo() {
+		for (Map.Entry<Location, BlockData> entry : undoMap.entrySet()) {
+			BlockData data = entry.getValue();
 			Block block = entry.getKey().getBlock();
-			block.setType(data.getItemType());
-			block.setData(data.getData());
+			block.setBlockData(data);
 		}
 
 		undoMap.clear();

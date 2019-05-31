@@ -1,11 +1,7 @@
-name: RW
+name: SkyJot
 main: com.allocinit.skyjot.SkyJot
-version: 1.0.0-SNAPSHOT
+version: 2.0.0-SNAPSHOT
+api-version: 1.13
 
 commands:
   skyjot:
-  
-permissions:
-  skyjot:
-    default: op
-  

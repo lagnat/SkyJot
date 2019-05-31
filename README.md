@@ -14,3 +14,6 @@ SkyJot is a Bukkit Minecraft plugin for writing block letters in the sky.  It wa
 
 ### Example
 /skyjot write b:17:2 ~ ~ ~ Hello\nWorld
+
+### Open Source
+[github](https://github.com/lagnat/SkyJot)
